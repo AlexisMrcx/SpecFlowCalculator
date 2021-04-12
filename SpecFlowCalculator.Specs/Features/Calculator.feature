@@ -11,3 +11,10 @@ Scenario: Add two numbers
 	And the second number is 70
 	When the two numbers are added
 	Then the result should be 120
+
+@mytag
+Scenario: Multiply two numbers
+	Given the first number is 5
+	And the second number is 3
+	When the two numbers are multiply
+	Then the result should be 15
