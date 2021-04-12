@@ -16,5 +16,10 @@ namespace SpecFlowCalculator
         {
             return FirstNumber * SecondNumber;
         }
+
+        public float Divide()
+        {
+            return FirstNumber / SecondNumber;
+        }
     }
 }
