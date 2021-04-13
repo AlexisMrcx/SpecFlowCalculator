@@ -1,31 +1,58 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SpecFlowCalculator
 {
     public class Calculator
     {
-        public int FirstNumber { get; set; }
-        public int SecondNumber { get; set; }
+        public List<int> Numbers { get; }        
+
+
+        public Calculator()
+        {
+            Numbers = new List<int>();
+        }
 
         public int Add()
         {
-            return FirstNumber + SecondNumber;
+            int result = 0;
+
+            foreach(int number in Numbers)
+            {
+                result += number;
+            }
+
+            return result;
         }
 
         public int Multiply()
         {
-            return FirstNumber * SecondNumber;
+            int result = Numbers[0];
+
+            for(int i = 1; i < Numbers.Count; i++)
+            {
+                result *= Numbers[i];   
+            }
+
+            return result;
         }
 
         public int Divide()
         {
-            if (SecondNumber != 0)
+            int result = Numbers[0];
+
+            if (Numbers.Contains(0))
             {
-                return FirstNumber / SecondNumber;
+                throw new Exception("Impossible de diviser par zéro !!");
             }
             else
             {
-                throw new Exception("Impossible de diviser par zéro !!");
+                for (int i = 1; i < Numbers.Count; i++)
+                {
+                    result /= Numbers[i];
+                }
+
+                return result;
             }
             
         }

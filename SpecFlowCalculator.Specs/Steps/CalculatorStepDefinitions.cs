@@ -21,31 +21,25 @@ namespace SpecFlowCalculator.Specs.Steps
             _scenarioContext = scenarioContext;
         }
 
-        [Given("the first number is (.*)")]
-        public void GivenTheFirstNumberIs(int number)
+        [Given("number is (.*)")]
+        public void GivenNumberIs(int number)
         {
-            _calculator.FirstNumber = number;
+            _calculator.Numbers.Add(number);
         }
 
-        [Given("the second number is (.*)")]
-        public void GivenTheSecondNumberIs(int number)
-        {
-            _calculator.SecondNumber = number;
-        }
-
-        [When("the two numbers are added")]
+        [When("the numbers are added")]
         public void WhenTheTwoNumbersAreAdded()
         {
             _result = _calculator.Add();
         }
 
-        [When("the two numbers are multiply")]
+        [When("the numbers are multiply")]
         public void WhenTheTwoNumbersAreMultiply()
         {
             _result = _calculator.Multiply();
         }
 
-        [When("the two numbers are divide")]
+        [When("the numbers are divide")]
         public void WhenTheTwoNumbersAreDivide()
         {
             try

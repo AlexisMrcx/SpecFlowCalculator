@@ -7,28 +7,55 @@ Link to a feature: [Calculator](SpecFlowCalculator.Specs/Features/Calculator.fea
 
 @Addition
 Scenario: Add two numbers
-	Given the first number is 50
-	And the second number is 70
-	When the two numbers are added
+	Given number is 50
+	And number is 70
+	When the numbers are added
 	Then the result should be 120
+
+@AdditionNMembres
+Scenario: Add four numbers
+	Given number is 10
+	And number is 3
+	And number is 8
+	And number is 1
+	When the numbers are added
+	Then the result should be 22
+
 
 @Multiplication
 Scenario: Multiply two numbers
-	Given the first number is 5
-	And the second number is 3
-	When the two numbers are multiply
+	Given number is 5
+	And number is 3
+	When the numbers are multiply
 	Then the result should be 15
+
+@MultiplicationNMembres
+Scenario: Multiply three numbers
+	Given number is 5
+	And number is 6
+	And number is 2
+	When the numbers are multiply
+	Then the result should be 60
+
 
 @Division
 Scenario: Divide two numbers
-	Given the first number is 10
-	And the second number is 2
-	When the two numbers are divide
+	Given number is 10
+	And number is 2
+	When the numbers are divide
 	Then the result should be 5
 
+@DivideNMembres
+Scenario: Divide three numbres
+	Given number is 100
+	And number is 4
+	And number is 2
+	When the numbers are divide
+	Then the result should be 12
+
 @DivisionParZero
-Scenario: Divide first number by zero
-	Given the first number is 5
-	And the second number is 0
-	When the two numbers are divide
+Scenario: Divide by zero
+	Given number is 5
+	And number is 0
+	When the numbers are divide
 	Then Exception Impossible de diviser par zéro !! was throw
