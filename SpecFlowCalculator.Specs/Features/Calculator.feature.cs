@@ -21,7 +21,6 @@ namespace SpecFlowCalculator.Specs.Features
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [TechTalk.SpecRun.FeatureAttribute("Calculator", Description=@"![Calculator](https://specflow.org/wp-content/uploads/2020/09/calculator.png)
 Simple calculator for adding **two** numbers
-
 Link to a feature: [Calculator](SpecFlowCalculator.Specs/Features/Calculator.feature)
 ***Further read***: **[Learn more about how to generate Living Documentation](https://docs.specflow.org/projects/specflow-livingdoc/en/latest/LivingDocGenerator/Generating-Documentation.html)**", SourceFile="Features\\Calculator.feature", SourceLine=0)]
     public partial class CalculatorFeature
@@ -40,7 +39,6 @@ Link to a feature: [Calculator](SpecFlowCalculator.Specs/Features/Calculator.fea
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Calculator", @"![Calculator](https://specflow.org/wp-content/uploads/2020/09/calculator.png)
 Simple calculator for adding **two** numbers
-
 Link to a feature: [Calculator](SpecFlowCalculator.Specs/Features/Calculator.feature)
 ***Further read***: **[Learn more about how to generate Living Documentation](https://docs.specflow.org/projects/specflow-livingdoc/en/latest/LivingDocGenerator/Generating-Documentation.html)**", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
@@ -79,14 +77,14 @@ Link to a feature: [Calculator](SpecFlowCalculator.Specs/Features/Calculator.fea
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Add two numbers", new string[] {
-                "Addition"}, SourceLine=8)]
+                "Addition"}, SourceLine=7)]
         public virtual void AddTwoNumbers()
         {
             string[] tagsOfScenario = new string[] {
                     "Addition"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two numbers", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 9
+#line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -106,16 +104,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 10
- testRunner.Given("number is 50", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 11
- testRunner.And("number is 70", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 12
- testRunner.When("the numbers are added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "number"});
+                table1.AddRow(new string[] {
+                            "50"});
+                table1.AddRow(new string[] {
+                            "70"});
+#line 9
+ testRunner.Given("the followings numbers exist:", ((string)(null)), table1, "Given ");
 #line hidden
 #line 13
+ testRunner.When("the numbers are added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 14
  testRunner.Then("the result should be 120", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -123,14 +124,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Add four numbers", new string[] {
-                "AdditionNMembres"}, SourceLine=15)]
+                "AdditionNMembres"}, SourceLine=16)]
         public virtual void AddFourNumbers()
         {
             string[] tagsOfScenario = new string[] {
                     "AdditionNMembres"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add four numbers", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 16
+#line 17
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -150,22 +151,23 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 17
- testRunner.Given("number is 10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "number"});
+                table2.AddRow(new string[] {
+                            "10"});
+                table2.AddRow(new string[] {
+                            "3"});
+                table2.AddRow(new string[] {
+                            "8"});
+                table2.AddRow(new string[] {
+                            "1"});
 #line 18
- testRunner.And("number is 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("the followings numbers exist:", ((string)(null)), table2, "Given ");
 #line hidden
-#line 19
- testRunner.And("number is 8", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 20
- testRunner.And("number is 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 21
+#line 24
  testRunner.When("the numbers are added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 22
+#line 25
  testRunner.Then("the result should be 22", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -173,14 +175,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Multiply two numbers", new string[] {
-                "Multiplication"}, SourceLine=25)]
+                "Multiplication"}, SourceLine=27)]
         public virtual void MultiplyTwoNumbers()
         {
             string[] tagsOfScenario = new string[] {
                     "Multiplication"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Multiply two numbers", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 26
+#line 28
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -200,16 +202,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 27
- testRunner.Given("number is 5", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 28
- testRunner.And("number is 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                            "number"});
+                table3.AddRow(new string[] {
+                            "5"});
+                table3.AddRow(new string[] {
+                            "3"});
 #line 29
+ testRunner.Given("the followings numbers exist:", ((string)(null)), table3, "Given ");
+#line hidden
+#line 33
  testRunner.When("the numbers are multiply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 30
+#line 34
  testRunner.Then("the result should be 15", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -217,14 +222,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Multiply three numbers", new string[] {
-                "MultiplicationNMembres"}, SourceLine=32)]
+                "MultiplicationNMembres"}, SourceLine=36)]
         public virtual void MultiplyThreeNumbers()
         {
             string[] tagsOfScenario = new string[] {
                     "MultiplicationNMembres"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Multiply three numbers", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 33
+#line 37
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -244,19 +249,21 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 34
- testRunner.Given("number is 5", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "number"});
+                table4.AddRow(new string[] {
+                            "5"});
+                table4.AddRow(new string[] {
+                            "6"});
+                table4.AddRow(new string[] {
+                            "2"});
+#line 38
+ testRunner.Given("the followings numbers exist:", ((string)(null)), table4, "Given ");
 #line hidden
-#line 35
- testRunner.And("number is 6", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 36
- testRunner.And("number is 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 37
+#line 43
  testRunner.When("the numbers are multiply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 38
+#line 44
  testRunner.Then("the result should be 60", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -264,14 +271,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Divide two numbers", new string[] {
-                "Division"}, SourceLine=41)]
+                "Division"}, SourceLine=46)]
         public virtual void DivideTwoNumbers()
         {
             string[] tagsOfScenario = new string[] {
                     "Division"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Divide two numbers", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 42
+#line 47
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -291,16 +298,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 43
- testRunner.Given("number is 10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                            "number"});
+                table5.AddRow(new string[] {
+                            "10"});
+                table5.AddRow(new string[] {
+                            "2"});
+#line 48
+ testRunner.Given("the followings numbers exist:", ((string)(null)), table5, "Given ");
 #line hidden
-#line 44
- testRunner.And("number is 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 45
+#line 52
  testRunner.When("the numbers are divide", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 46
+#line 53
  testRunner.Then("the result should be 5", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -308,14 +318,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Divide three numbres", new string[] {
-                "DivideNMembres"}, SourceLine=48)]
+                "DivideNMembres"}, SourceLine=55)]
         public virtual void DivideThreeNumbres()
         {
             string[] tagsOfScenario = new string[] {
                     "DivideNMembres"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Divide three numbres", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 49
+#line 56
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -335,19 +345,21 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 50
- testRunner.Given("number is 100", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                            "number"});
+                table6.AddRow(new string[] {
+                            "100"});
+                table6.AddRow(new string[] {
+                            "4"});
+                table6.AddRow(new string[] {
+                            "2"});
+#line 57
+ testRunner.Given("the followings numbers exist:", ((string)(null)), table6, "Given ");
 #line hidden
-#line 51
- testRunner.And("number is 4", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 52
- testRunner.And("number is 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 53
+#line 62
  testRunner.When("the numbers are divide", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 54
+#line 63
  testRunner.Then("the result should be 12", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -355,14 +367,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Divide by zero", new string[] {
-                "DivisionParZero"}, SourceLine=56)]
+                "DivisionParZero"}, SourceLine=65)]
         public virtual void DivideByZero()
         {
             string[] tagsOfScenario = new string[] {
                     "DivisionParZero"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Divide by zero", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 57
+#line 66
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -382,16 +394,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 58
- testRunner.Given("number is 5", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                            "number"});
+                table7.AddRow(new string[] {
+                            "5"});
+                table7.AddRow(new string[] {
+                            "0"});
+#line 67
+ testRunner.Given("the followings numbers exist:", ((string)(null)), table7, "Given ");
 #line hidden
-#line 59
- testRunner.And("number is 0", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 60
+#line 71
  testRunner.When("the numbers are divide", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 61
+#line 72
  testRunner.Then("Exception Impossible de diviser par zéro !! was throw", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

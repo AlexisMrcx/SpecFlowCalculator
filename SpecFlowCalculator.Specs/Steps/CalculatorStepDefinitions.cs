@@ -21,10 +21,13 @@ namespace SpecFlowCalculator.Specs.Steps
             _scenarioContext = scenarioContext;
         }
 
-        [Given("number is (.*)")]
-        public void GivenNumberIs(int number)
+        [Given("the followings numbers exist:")]
+        public void GivenNumbers(Table numbers)
         {
-            _calculator.Numbers.Add(number);
+            foreach (TableRow row in numbers.Rows)
+            {
+                _calculator.Numbers.Add(int.Parse(row[0]));
+            }
         }
 
         [When("the numbers are added")]
@@ -45,11 +48,12 @@ namespace SpecFlowCalculator.Specs.Steps
             try
             {
                 _result = _calculator.Divide();
-            } catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 _exception = ex.Message;
             }
-            
+
         }
 
         [Then("the result should be (.*)")]
