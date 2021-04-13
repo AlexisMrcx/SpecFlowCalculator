@@ -17,9 +17,17 @@ namespace SpecFlowCalculator
             return FirstNumber * SecondNumber;
         }
 
-        public float Divide()
+        public int Divide()
         {
-            return FirstNumber / SecondNumber;
+            if (SecondNumber != 0)
+            {
+                return FirstNumber / SecondNumber;
+            }
+            else
+            {
+                throw new Exception("Impossible de diviser par zéro !!");
+            }
+            
         }
     }
 }

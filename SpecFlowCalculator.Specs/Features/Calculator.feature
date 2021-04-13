@@ -25,3 +25,10 @@ Scenario: Divide two numbers
 	And the second number is 2
 	When the two numbers are divide
 	Then the result should be 5
+
+@DivisionParZero
+Scenario: Divide first number by zero
+	Given the first number is 5
+	And the second number is 0
+	When the two numbers are divide
+	Then Exception Impossible de diviser par zéro !! was throw
